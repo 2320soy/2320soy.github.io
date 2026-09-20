@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="纱灯不仅是传统的照明工具，更是东方美学与手工艺术的结晶。本站提供纱灯制作教程、历史文化介绍、选购指南及DIY材料包推荐，带您领略光影交织的传统魅力。">
+    <meta name="keywords" content="纱灯, 传统工艺, 手工灯笼, 照明灯具, 国潮设计, 灯笼制作">
+    <title>纱灯-传统手工艺术与光影美学指南</title>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --accent-color: #C0392B;
+            --bg-color: #FDFBF7;
+            --text-main: #2C2C2C;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 8px auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: #6d360e;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/lantern_art/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            background-color: #a93226;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 40px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .category-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .category-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* History & Culture */
+        .history-section {
+            background-color: #F5F0E6;
+            padding: 80px 0;
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .history-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .history-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .history-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+        }
+
+        .history-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* DIY Guide */
+        .guide-section {
+            padding: 80px 0;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+        }
+
+        /* Materials */
+        .materials-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .material-item {
+            text-align: center;
+        }
+
+        .material-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 10px;
+            background-color: #eee;
+        }
+
+        .material-name {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 80px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            display: none;
+            padding-top: 10px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>✦</span> 纱灯工坊
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#history">历史渊源</a></li>
+                    <li><a href="#guide">制作指南</a></li>
+                    <li><a href="#materials">材料选购</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-btn">开始制作</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>光影之间的东方美学</h1>
+                <p>探索纱灯制作工艺，传承千年手作温度。从选材到组装，带您亲手打造独一无二的东方光影艺术。</p>
+                <a href="#guide" class="hero-btn">查看制作教程</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories container">
+            <div class="section-title">
+                <h2>纱灯分类</h2>
+                <p>不同风格的纱灯，适用于不同的场景与氛围</p>
+            </div>
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="category-icon">🏮</div>
+                    <h3>宫灯风格</h3>
+                    <p>传统宫廷造型，配以红绸彩绘，庄重典雅，适合节日庆典。</p>
+                </article>
+                <article class="category-card">
+                    <div class="category-icon">🎋</div>
+                    <h3>竹编风格</h3>
+                    <p>保留竹编骨架的自然纹理，搭配素色纱纸，清新雅致。</p>
+                </article>
+                <article class="category-card">
+                    <div class="category-icon">🏮</div>
+                    <h3>现代简约</h3>
+                    <p>几何造型设计，融入现代家居风格，光影效果柔和温馨。</p>
+                </article>
+                <article class="category-card">
+                    <div class="category-icon">🏮</div>
+                    <h3>异形创意</h3>
+                    <p>动物、植物等创意造型，适合儿童房或主题装饰空间。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="history-section">
+            <div class="container history-content">
+                <div class="history-text">
+                    <h2>千年传承，光影艺术</h2>
+                    <p>纱灯，又称灯笼，是中国传统民间工艺品之一。其历史可追溯至汉代，最初是照明工具，后来逐渐演变为集实用性与观赏性于一体的艺术品。</p>
+                    <p>传统的纱灯制作工艺极为讲究，需选用坚韧的竹篾作为骨架，外层糊以棉麻或绢纱，内壁粘贴宣纸以透光，再根据设计绘制山水、花鸟或吉祥图案。一盏上好的纱灯，不仅能在夜晚提供柔和的光源，更能彰显主人的品味与格调。</p>
+                    <p>如今，随着国潮文化的兴起，纱灯重新回到了大众视野，成为连接传统与现代生活方式的重要纽带。</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://picsum.photos/seed/lantern_history/600/400.jpg" alt="传统纱灯制作工艺展示">
+                </div>
+            </div>
+        </section>
+
+        <!-- DIY Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>纱灯制作基础指南</h2>
+                    <p>即使是初学者，也能通过简单的步骤制作出属于自己的第一盏纱灯</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>准备骨架</h3>
+                            <p>根据设计图纸，将竹子劈成均匀的篾条。使用砂纸打磨竹篾边缘，防止刺手。将竹篾通过绑扎或胶水连接，形成灯笼的立体框架。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>裱糊纱布</h3>
+                            <p>将准备好的棉麻纱或绢纱裁剪成合适的大小。使用浆糊将纱布均匀地贴在竹制骨架的外侧。注意纱布要绷紧，不能有褶皱，待其完全干透后，表面会变得平整光滑。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>绘制图案</h3>
+                            <p>在干燥的纱布表面，使用国画颜料或丙烯颜料进行绘制。传统工艺多采用工笔画法，也可根据喜好进行创意涂鸦。绘制完成后，需自然阴干。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>安装配件</h3>
+                            <p>在灯笼顶部安装提手或挂钩，底部安装灯座。连接电源或点燃蜡烛（注意安全），一盏精美的纱灯便完成了。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Section -->
+        <section id="materials" class="materials-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>必备材料清单</h2>
+                    <p>制作纱灯所需的基础材料与工具</p>
+                </div>
+                <div class="material-grid">
+                    <div class="material-item">
+                        <img src="https://picsum.photos/seed/bamboo/300/300.jpg" alt="毛竹" class="material-img">
+                        <div class="material-name">毛竹篾</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://picsum.photos/seed/fabric/300/300.jpg" alt="棉麻纱布" class="material-img">
+                        <div class="material-name">棉麻纱布</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://picsum.photos/seed/paper/300/300.jpg" alt="宣纸" class="material-img">
+                        <div class="material-name">宣纸/绢</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://picsum.photos/seed/paint/300/300.jpg" alt="颜料" class="material-img">
+                        <div class="material-name">国画颜料</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">纱灯可以放在户外使用吗？</div>
+                    <div class="faq-answer">普通棉麻纱灯不建议长期户外使用，雨水和潮湿环境容易导致骨架生锈或纱布霉变。如需户外使用，建议购买专门的防水纱灯或采取遮雨措施。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">制作纱灯需要绘画基础吗？</div>
+                    <div class="faq-answer">不需要。您可以使用简单的色彩填涂，或者购买现成的半成品纱布图案进行制作。如果希望绘制精美图案，建议先练习基础的线条勾勒。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何选择合适的纱纸材质？</div>
+                    <div class="faq-answer">透光性是关键。宣纸透光柔和但易破损，棉麻纱耐久性较好。初学者建议从耐用的棉麻纱布开始尝试。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于纱灯工坊</h4>
+                    <p>致力于推广中国传统手工艺文化，提供专业的纱灯制作教程、材料包及文化科普。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">制作教程</a></li>
+                        <li><a href="#">材料选购</a></li>
+                        <li><a href="#">历史百科</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱: contact@shawlan.com</li>
+                        <li>电话: 400-123-4567</li>
+                        <li>地址: 中国·某市文化创意园</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 纱灯工坊. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // FAQ Interaction
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                  </html>
