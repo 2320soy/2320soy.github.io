@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成人内容 - 安全浏览指南与相关内容规范说明</title>
+    <meta name="description" content="关于成人内容浏览的安全提示、相关内容规范说明及健康浏览建议。旨在引导用户建立健康的网络使用习惯，保护个人隐私与网络安全。">
+    <meta name="keywords" content="成人内容, 安全浏览, 网络健康, 内容规范, 隐私保护">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Warning Banner */
+        .warning-banner {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            margin-bottom: 32px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+
+        .warning-text {
+            font-size: 0.95rem;
+            color: #856404;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e0e0e0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .card-link {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* List Group */
+        .list-group {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .list-item {
+            padding: 16px 24px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item-title {
+            font-weight: 500;
+        }
+
+        .list-item-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 12px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 24px 16px 24px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">安全<span>指南</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">安全规范</a></li>
+                    <li><a href="#">隐私保护</a></li>
+                    <li><a href="#">健康建议</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>网络浏览安全与健康指南</h1>
+            <p>了解在浏览各类网络内容时如何保护个人隐私、遵守法律法规并保持身心健康。</p>
+        </section>
+
+        <!-- Warning Banner -->
+        <div class="warning-banner">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-text">
+                <strong>重要提示：</strong> 在访问包含成人或敏感内容时，请务必确认访问来源的安全性，并注意保护个人隐私信息。
+            </div>
+        </div>
+
+        <!-- Section 1: Core Safety Principles -->
+        <section>
+            <h2 class="section-title">浏览安全核心原则</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3>1. 确认来源合法性</h3>
+                    <p>在浏览任何网页内容之前，请检查网站是否具备合法的ICP备案号。正规网站会公开其联系方式和备案信息。</p>
+                    <a href="#" class="card-link">查看如何查询备案信息 →</a>
+                </article>
+                <article class="card">
+                    <h3>2. 防范恶意软件</h3>
+                    <p>不要轻易点击弹窗广告或下载不明来源的附件。使用信誉良好的安全软件可以有效拦截恶意脚本和病毒。</p>
+                    <a href="#" class="card-link">了解防病毒基础设置 →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Content Classification & Selection -->
+        <section>
+            <h2 class="section-title">内容分类与选择建议</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>成人内容</h3>
+                    <p>此类内容需在符合法律法规的前提下，由成年人自主选择观看。建议使用屏蔽工具过滤不良信息，避免未成年人误触。</p>
+                </div>
+                <div class="card">
+                    <h3>资讯信息</h3>
+                    <p>浏览资讯时注意甄别信息真伪，多渠道验证新闻来源，避免被虚假信息误导。</p>
+                </div>
+                <div class="card">
+                    <h3>娱乐资源</h3>
+                    <p>下载软件或游戏时，请认准官方应用商店或开发者官网，防止下载到捆绑插件或恶意软件。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Privacy Protection -->
+        <section>
+            <h2 class="section-title">个人隐私保护措施</h2>
+            <div class="list-group">
+                <div class="list-item">
+                    <div>
+                        <div class="list-item-title">不随意填写个人信息</div>
+                        <div class="list-item-desc">在非必要情况下，避免在网页中提交真实姓名、手机号或住址。</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div>
+                        <div class="list-item-title">谨慎使用社交登录</div>
+                        <div class="list-item-desc">使用第三方社交账号登录时，注意查看授权范围，防止过度收集数据。</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div>
+                        <div class="list-item-title">定期清理Cookies</div>
+                        <div class="list-item-desc">定期清除浏览器缓存和Cookies，减少广告追踪，保护浏览记录隐私。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: FAQ -->
+        <section>
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">浏览此类网页会导致法律风险吗？</div>
+                <div class="faq-answer">
+                    在中国大陆，传播、制作或持有非法淫秽物品是违反《中华人民共和国刑法》和《治安管理处罚法》的行为。请务必遵守当地法律法规，仅浏览合法合规的内容。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何判断一个网站是否安全？</div>
+                <div class="faq-answer">
+                    可以通过查看网站的SSL证书（地址栏是否有小锁图标）、检查备案信息以及使用在线安全扫描工具来评估网站的安全性。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">浏览此类内容对心理健康有影响吗？</div>
+                <div class="faq-answer">
+                    过度沉迷或接触不良信息可能对心理健康产生负面影响。建议保持适度浏览，培养健康的兴趣爱好，建立积极的生活态度。
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>安全指南</h4>
+                    <p>致力于提供网络环境安全与健康的科普知识。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="#">网络安全法解读</a>
+                    <a href="#">个人信息保护法</a>
+                    <a href="#">网络素养教育</a>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>info@security-guide.example</p>
+                    <p>客服热线：123456789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 网络安全与健康浏览指南. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
