@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9uu_有你有我足矣官网 - 沉浸式情感治愈与社区平台</title>
+    <meta name="description" content="9uu_有你有我足矣官网致力于为用户提供温暖、治愈的线上社区体验。在这里，您可以分享情感故事、参与互动话题、浏览精选情感内容，感受‘有你有我足矣’的陪伴与支持。">
+    <meta name="keywords" content="9uu_有你有我足矣官网,情感社区,治愈系,在线互动,情感分享">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #5649c0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            padding: 80px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.1) 0%, transparent 60%);
+            animation: pulse 10s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-color: rgba(108, 92, 231, 0.2);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-sub);
+            margin-bottom: 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* 核心功能区 */
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--bg-color);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            background-color: white;
+            box-shadow: var(--shadow);
+            border-color: rgba(108, 92, 231, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* 内容板块 */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 热门话题 */
+        .topics {
+            background-color: #fff;
+        }
+
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .topic-card {
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .topic-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .topic-content {
+            padding: 20px;
+        }
+
+        .topic-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .topic-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* 治愈语录 */
+        .quotes {
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: #2d3436;
+        }
+
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quote-item {
+            margin-bottom: 30px;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* 常见问题 */
+        .faq {
+            background-color: var(--bg-color);
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            background-color: #f0f0f5;
+            color: var(--primary-color);
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            border-top: 1px solid #eee;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                display: none; /* 移动端简化，实际项目中可做汉堡菜单 */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+            
+            .btn-primary {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                9uu<span>_有你有我足矣</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#topics">热门话题</a></li>
+                    <li><a href="#features">社区功能</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary" onclick="showJoinModal()">加入我们</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-tags">
+                    <span class="tag">情感陪伴</span>
+                    <span class="tag">在线交流</span>
+                    <span class="tag">治愈系</span>
+                </div>
+                <h1>9uu_有你有我足矣 <br><span>让每一次相遇都值得珍藏</span></h1>
+                <p>这是一个属于每一个孤独灵魂的栖息地。在这里，没有评判，只有理解。无论你正在经历什么，我们都在这里，用文字和声音陪伴你度过每一个夜晚。</p>
+                <div style="margin-top: 30px;">
+                    <a href="#topics" class="btn-primary">开始探索</a>
+                    <a href="#features" style="margin-left: 15px; color: var(--primary-color); font-weight: 600;">了解更多</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">✎</div>
+                        <h3>情感树洞</h3>
+                        <p>匿名倾诉你的心事，在这里释放压力，获得陌生人温暖的回应与鼓励。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">♥</div>
+                        <h3>兴趣圈子</h3>
+                        <p>加入你感兴趣的圈子，与志同道合的朋友分享生活点滴，寻找灵魂伴侣。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">♫</div>
+                        <h3>晚安电台</h3>
+                        <p>每晚准时推送治愈系音频，伴你入眠，让温暖的声音成为你的守护者。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">★</div>
+                        <h3>每日一句</h3>
+                        <p>精选全网最治愈的语录，每天一句，为你的生活注入正能量。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="section topics">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门话题与故事</h2>
+                    <p>看看大家都在分享什么，每一个故事背后都有一颗跳动的心。</p>
+                </div>
+                <div class="topic-list">
+                    <article class="topic-card">
+                        <img src="https://picsum.photos/seed/love1/400/250" alt="温暖的故事" class="topic-img">
+                        <div class="topic-content">
+                            <span class="topic-tag">治愈</span>
+                            <h3 class="topic-title">那年夏天，我在图书馆遇见了你</h3>
+                            <div class="topic-meta">
+                                <span>作者：匿名用户</span>
+                                <span>2小时前</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="topic-card">
+                        <img src="https://picsum.photos/seed/city2/400/250" alt="城市生活" class="topic-img">
+                        <div class="topic-content">
+                            <span class="topic-tag">生活</span>
+                            <h3 class="topic-title">一个人在大城市的坚持与梦想</h3>
+                            <div class="topic-meta">
+                                <span>作者：追梦人</span>
+                                <span>5小时前</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="topic-card">
+                        <img src="https://picsum.photos/seed/nature3/400/250" alt="自然风景" class="topic-img">
+                        <div class="topic-content">
+                            <span class="topic-tag">风景</span>
+                            <h3 class="topic-title">周末去山里走走，找回内心的平静</h3>
+                            <div class="topic-meta">
+                                <span>作者：山间风</span>
+                                <span>1天前</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="topic-card">
+                        <img src="https://picsum.photos/seed/cat4/400/250" alt="萌宠" class="topic-img">
+                        <div class="topic-content">
+                            <span class="topic-tag">萌宠</span>
+                            <h3 class="topic-title">我家的小猫治愈了我的抑郁症</h3>
+                            <div class="topic-meta">
+                                <span>作者：猫奴</span>
+                                <span>1天前</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="section quotes">
+            <div class="container quote-container">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <h2 style="color: #2d3436;">每日治愈语录</h2>
+                </div>
+                <div class="quote-item">
+                    <p class="quote-text">“世界上只有一种真正的英雄主义，那就是在认清生活的真相后依然热爱生活。”</p>
+                    <p class="quote-author">— 罗曼·罗兰</p>
+                </div>
+                <div class="quote-item">
+                    <p class="quote-text">“愿你被这个世界温柔以待，若不然，愿你成为自己的太阳。”</p>
+                    <p class="quote-author">— 佚名</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq">
+            <div class="container faq-wrapper">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>关于9uu_有你有我足矣，你可能想知道的事情。</p>
+                </div>
+                <details>
+                    <summary>如何开始使用9uu平台？</summary>
+                    <div class="faq-content">
+                        <p>您只需点击页面右上角的“加入我们”按钮，按照提示注册账号即可。注册过程完全免费，且支持手机号或第三方社交账号登录。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>我的隐私信息会泄露吗？</summary>
+                    <div class="faq-content">
+                        <p>您的隐私是我们的首要任务。9uu平台采用端到端加密技术保护您的数据。在“情感树洞”功能中，您可以选择完全匿名发布内容，系统不会记录您的真实身份信息。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>如何参与热门话题讨论？</summary>
+                    <div class="faq-content">
+                        <p>在“热门话题”板块，您可以点击任意感兴趣的话题卡片进入详情页。点击“我要参与”即可发表您的看法或故事，优质内容有机会被推荐到首页。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>是否支持移动端访问？</summary>
+                    <div class="faq-content">
+                        <p>是的，9uu_有你有我足矣官网完美适配桌面端和移动端浏览器。您可以随时随地通过手机浏览内容，享受流畅的阅读体验。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 15px; display: inline-block;">
+                        9uu<span>_有你有我足矣</span>
+                    </a>
+                    <p style="font-size: 0.9rem; color: #b2bec3;">
+                        致力于打造最温暖的线上社区，让每一个孤独的灵魂都能找到归属感。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">合作咨询</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">加入团队</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">微博账号</a></li>
+                        <li><a href="#">Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 9uu_有你有我足矣官网 版权所有 | 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：显示加入弹窗提示
+        function showJoinModal() {
+            // 使用原生 confirm 模拟交互，实际项目中可替换为自定义模态框
+            const confirmed = confirm("欢迎来到9uu_有你有我足矣！\n\n点击确定将跳转至注册页面（演示）。\n\n" + 
+                                      "注：这是一个纯静态HTML演示页面，未连接真实后端。");
+            if (confirmed) {
+                // 模拟跳转行为
+                console.log("用户点击了加入按钮");
+            }
+        }
+
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
