@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVC拿破仑官网 - 欧洲历史军事文化研究平台，提供拿破仑帝国历史资料、军事战略分析、帝国文物展示及相关学术研究服务。">
+    <meta name="keywords" content="avc拿破仑, 拿破仑, 法国历史, 拿破仑帝国, 欧洲战争史, 军事战略">
+    <title>avc拿破仑-欧洲历史军事文化研究与展示平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #8c2e2e; /* 法国红 */
+            --accent-color: #d4af37; /* 金色 */
+            --bg-color: #f9f7f2;
+            --text-color: #333;
+            --light-text: #666;
+            --border-radius: 4px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-subscribe {
+            padding: 8px 20px;
+            background-color: var(--secondary-color);
+            color: #fff;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #6e2222;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/napoleon1/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--secondary-color);
+            color: #fff;
+            font-size: 16px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--secondary-color);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            border-color: #fff;
+        }
+
+        /* 核心数据栏 */
+        .stats-bar {
+            background-color: #fff;
+            padding: 40px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: var(--border-radius);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* 主要内容区 */
+        .main-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+
+        /* 时间轴/历史脉络 */
+        .history-timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #ddd;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 战役展示 */
+        .battles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .battle-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .battle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .battle-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .battle-info {
+            padding: 20px;
+        }
+
+        .battle-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .battle-info p {
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .battle-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* 资源库 */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .resource-icon {
+            font-size: 40px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .resource-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 20px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>AVC</span>拿破仑
+            </a>
+            <nav class="nav-links">
+                <a href="#history">历史脉络</a>
+                <a href="#battles">著名战役</a>
+                <a href="#resources">研究资源</a>
+                <a href="#gallery">帝国文物</a>
+            </nav>
+            <a href="#contact" class="btn-subscribe">加入会员</a>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>重塑欧洲历史</h1>
+            <p>深入探索拿破仑·波拿巴的军事天才、政治生涯与帝国兴衰。AVC拿破仑致力于提供最详尽的历史资料与学术研究支持。</p>
+            <a href="#history" class="btn-primary">探索历史档案</a>
+        </div>
+    </section>
+
+    <!-- 数据统计栏 -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>历史文献收录</p>
+                </div>
+                <div class="stat-item">
+                    <h3>60+</h3>
+                    <p>著名战役分析</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1.2M</h3>
+                    <p>全球历史爱好者</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99%</h3>
+                    <p>学术资料准确率</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="container main-section">
+        
+        <!-- 历史脉络 -->
+        <section id="history">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>历史脉络</h2>
+                </div>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+            <div class="history-timeline">
+                <article class="timeline-item">
+                    <span class="timeline-date">1769年</span>
+                    <h3>出生与早年</h3>
+                    <p>出生于科西嘉岛，接受法国本土教育，展现出卓越的数学与军事天赋。</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">1799年</span>
+                    <h3>雾月政变</h3>
+                    <p>发动政变建立执政府，标志着法兰西第一共和国向帝制的过渡。</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">1804年</span>
+                    <h3>加冕称帝</h3>
+                    <p>在巴黎圣母院加冕为法兰西人的皇帝，颁布《拿破仑法典》。</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">1815年</span>
+                    <h3>百日王朝与滑铁卢</h3>
+                    <p>从厄尔巴岛逃出重返巴黎，最终在滑铁卢战役中战败，被流放至圣赫勒拿岛。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 著名战役 -->
+        <section id="battles" style="margin-top: 80px;">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>著名战役</h2>
+                </div>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+            <div class="battles-grid">
+                <div class="battle-card">
+                    <img src="https://picsum.photos/seed/valmy/400/300" alt="瓦尔密战役" class="battle-img">
+                    <div class="battle-info">
+                        <h3>瓦尔密战役 (1792)</h3>
+                        <p>法国革命军与普鲁士军队的第一次大规模交锋，被史学家称为“从这一刻起，世界不再属于旧时代。”</p>
+                        <div class="battle-meta">
+                            <span>战役地位</span>
+                            <span>转折点</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="battle-card">
+                    <img src="https://picsum.photos/seed/austerlitz/400/300" alt="奥斯特里茨战役" class="battle-img">
+                    <div class="battle-info">
+                        <h3>奥斯特里茨战役 (1805)</h3>
+                        <p>拿破仑军事生涯的巅峰之作，以少胜多击败俄奥联军，确立了拿破仑在欧洲的霸主地位。</p>
+                        <div class="battle-meta">
+                            <span>战役地位</span>
+                            <span>帝国全盛</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="battle-card">
+                    <img src="https://picsum.photos/seed/waterloo/400/300" alt="滑铁卢战役" class="battle-img">
+                    <div class="battle-info">
+                        <h3>滑铁卢战役 (1815)</h3>
+                        <p>拿破仑军事生涯的终点。普鲁士军队的及时介入与威灵顿公爵的顽强防守，终结了拿破仑的统治。</p>
+                        <div class="battle-meta">
+                            <span>战役地位</span>
+                            <span>最终决战</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研究资源 -->
+        <section id="resources" style="margin-top: 80px;">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>学术与研究资源</h2>
+                </div>
+            </div>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📜</div>
+                    <h3>《拿破仑法典》</h3>
+                    <p>现代民法的基石，详细解读法典中的平等原则、财产权保护及契约自由。</p>
+                    <a href="#" style="color:var(--secondary-color); font-size:14px; font-weight:bold;">在线阅读</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">⚔️</div>
+                    <h3>军事战略研究</h3>
+                    <p>分析拿破仑的战术创新，包括炮兵协同、侧翼包抄与快速机动战术。</p>
+                    <a href="#" style="color:var(--secondary-color); font-size:14px; font-weight:bold;">战术分析</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🗺️</div>
+                    <h3>欧洲地图集</h3>
+                    <p>提供拿破仑战争时期欧洲大陆的政治版图演变，动态展示疆域变化。</p>
+                    <a href="#" style="color:var(--secondary-color); font-size:14px; font-weight:bold;">查看地图</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">👥</div>
+                    <h3>人物志</h3>
+                    <p>收录拿破仑及其将领、对手的生平传记与关系图谱。</p>
+                    <a href="#" style="color:var(--secondary-color); font-size:14px; font-weight:bold;">人物档案</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>AVC拿破仑</h2>
+                    <p>致力于保存和传播拿破仑时代的军事、政治与文化历史，为历史爱好者提供权威的学习平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">历史文献</a></li>
+                        <li><a href="#">战争地图</a></li>
+                        <li><a href="#">人物传记</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律信息</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AVC拿破仑历史研究平台. All Rights Reserved. 仅供历史文化研究参考。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
