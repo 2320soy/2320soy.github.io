@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="智化寺旅游指南，介绍北京智化寺历史沿革、建筑特色、智化京音乐文化及游览攻略。提供门票信息、开放时间、交通路线及文物保护详情。">
+    <meta name="keywords" content="智化寺, 北京智化寺, 智化寺旅游, 智化京音乐, 北京古建筑, 文物保护单位">
+    <title>智化寺-北京明代古刹与智化京音乐文化展示平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 铜色/木色 */
+            --secondary-color: #D2691E; /* 深橙色 */
+            --bg-color: #FDFBF7; /* 宣纸白 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-red: #8B0000; /* 朱红 */
+            --border-radius: 4px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-family: "KaiTi", serif;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .nav-cta:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/zhihuasi_hero/1920/800.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-family: "KaiTi", serif;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-red);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a00000;
+            transform: translateY(-2px);
+        }
+
+        /* 介绍区 */
+        .intro-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-family: "KaiTi", serif;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .intro-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 核心亮点：京音乐 */
+        .music-section {
+            background-color: #fff;
+            padding: 5rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .music-layout {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .music-image {
+            flex: 1;
+        }
+
+        .music-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .music-content {
+            flex: 1;
+        }
+
+        .music-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-family: "KaiTi", serif;
+        }
+
+        .music-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .music-list li::before {
+            content: "♪";
+            color: var(--accent-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* 游览信息 */
+        .guide-section {
+            padding: 5rem 0;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .guide-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .guide-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .guide-card-body {
+            padding: 1.5rem;
+        }
+
+        .guide-card-body h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .guide-card-body p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .info-table td {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-table td:first-child {
+            color: var(--text-light);
+            width: 40%;
+        }
+
+        .info-table td:last-child {
+            font-weight: 500;
+        }
+
+        /* 建筑复原图展示 */
+        .architecture-section {
+            padding: 5rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .archi-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .archi-item {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        .archi-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .archi-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .archi-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 1rem;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 1rem 0;
+                gap: 1rem;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .music-layout {
+                flex-direction: column;
+            }
+
+            .archi-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>智化寺</span> 北京古建文化
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro" class="active">寺庙简介</a></li>
+                    <li><a href="#music">京音乐</a></li>
+                    <li><a href="#guide">游览指南</a></li>
+                    <li><a href="#architecture">建筑艺术</a></li>
+                    <li><a href="#contact" class="nav-cta">预约参观</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>智化寺</h1>
+            <p>中国现存最完整的明代木结构建筑群之一 · 活态传承的皇家古乐</p>
+            <a href="#guide" class="btn">开始探索</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- 寺庙简介 -->
+        <section id="intro" class="intro-section container">
+            <div class="section-title">
+                <h2>皇家敕建的古老禅林</h2>
+                <p>始建于明正统年间，历经数百年风雨，依然屹立于北京市东城区禄米仓胡同</p>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p>智化寺，始建于明英宗天顺元年（1457年），由太监王振所建。作为皇家敕建的寺院，它不仅承载着深厚的历史记忆，更以其独特的建筑布局和珍贵的文物收藏而闻名于世。寺内殿宇层层叠叠，气势恢宏，是北京城内保存最完整的明代木结构建筑群。</p>
+                    <p>智化寺不仅是佛教圣地，更是中国传统文化的瑰宝。这里不仅拥有精美的古建，更有一项被列入国家级非物质文化遗产的宝贵遗产——智化寺京音乐。自明代以来，京音乐代代相传，从未间断，被誉为“中国古代音乐的活化石”。</p>
+                </div>
+                <div class="intro-features">
+                    <div class="feature-item">
+                        <h3>皇家敕建</h3>
+                        <p>由太监王振主持修建，最初名为“报智寺”，后改称智化寺，享有皇家特权。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>木构瑰宝</h3>
+                        <p>主要建筑大悲坛、智化殿等均采用严格的明代营造法式，斗拱硕大，结构精巧。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>皇家音乐</h3>
+                        <p>源于宫廷音乐，保留了唐代燕乐的遗韵，是中国传统音乐的重要流派。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>藏经楼</h3>
+                        <p>珍藏有明代万历年间刊刻的《大藏经》等珍贵文献，具有极高的学术价值。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 京音乐特色 -->
+        <section id="music" class="music-section">
+            <div class="container music-layout">
+                <div class="music-image">
+                    <img src="https://picsum.photos/seed/music_traditional/600/400.jpg" alt="智化寺京音乐演奏">
+                </div>
+                <div class="music-content">
+                    <h2>智化寺京音乐</h2>
+                    <p>智化寺京音乐是中国现存最古老的古乐之一，被誉为“中国音乐史上的活化石”。它源于唐代燕乐，传入智化寺后，经过数百年的传承与发展，形成了独具特色的演奏风格。</p>
+                    <ul class="music-list">
+                        <li><strong>传承久远：</strong> 智化寺京音乐自明代创建以来，由寺院僧人代代相传，传承谱系清晰，从未间断，是世界上唯一完整保存下来的唐代宫廷音乐遗响。</li>
+                        <li><strong>乐器独特：</strong> 使用笙、管、笛、云锣等传统乐器，音色古朴典雅，具有独特的宗教韵味。</li>
+                        <li><strong>曲谱珍贵：</strong> 保存有完整的工尺谱，对于研究中国古代音乐史、律吕制度具有重要的学术价值。</li>
+                        <li><strong>表演形式：</strong> 常在智化寺的智化殿和万佛阁举行法会演奏，游客有机会近距离聆听这穿越时空的乐声。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游览指南 -->
+        <section id="guide" class="guide-section container">
+            <div class="section-title">
+                <h2>游览指南</h2>
+                <p>了解开放时间、门票价格及参观路线，规划您的文化之旅</p>
+            </div>
+            <div class="guide-grid">
+                <!-- 门票信息 -->
+                <article class="guide-card">
+                    <div class="guide-card-body">
+                        <h3>参观须知</h3>
+                        <table class="info-table">
+                            <tr>
+                                <td>开放时间</td>
+                                <td>09:00 - 16:30 (16:00停止售票)</td>
+                            </tr>
+                            <tr>
+                                <td>门票价格</td>
+                                <td>20元/人 (学生及老人持有效证件半价)</td>
+                            </tr>
+                            <tr>
+                                <td>预约方式</td>
+                                <td>建议通过官方渠道或电话提前预约</td>
+                            </tr>
+                            <tr>
+                                <td>最佳游览</td>
+                                <td>京音乐演出日 (需留意官方公告)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+
+                <!-- 交通路线 -->
+                <article class="guide-card">
+                    <div class="guide-card-body">
+                        <h3>交通路线</h3>
+                        <p><strong>地址：</strong> 北京市东城区禄米仓胡同5号</p>
+                        <p><strong>地铁：</strong> 6号线东四站D口出，步行约800米</p>
+                        <p><strong>公交：</strong> 106路、108路、111路、684路“东四”站下车</p>
+                        <p><strong>停车：</strong> 周边停车位较少，建议绿色出行</p>
+                    </div>
+                </article>
+
+                <!-- 游览建议 -->
+                <article class="guide-card">
+                    <div class="guide-card-body">
+                        <h3>游览建议</h3>
+                        <p>智化寺内殿宇众多，建议按照山门—智化门—智化殿—万佛阁—藏经楼的顺序游览。重点欣赏智化殿的藻井和转轮藏，聆听每周六、周日的京音乐演出。</p>
+                        <p>寺院内古树参天，环境清幽，是感受明代皇家园林氛围的好去处。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 建筑艺术 -->
+        <section id="architecture" class="architecture-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>建筑艺术赏析</h2>
+                    <p>智化寺的建筑规制严格遵循皇家标准，展现了明代木构建筑的巅峰技艺</p>
+                </div>
+                <div class="archi-gallery">
+                    <div class="archi-item">
+                        <img src="https://picsum.photos/seed/arch1/400/300.jpg" alt="智化寺山门">
+                        <div class="archi-overlay">山门</div>
+                    </div>
+                    <div class="archi-item">
+                        <img src="https://picsum.photos/seed/arch2/400/300.jpg" alt="智化殿">
+                        <div class="archi-overlay">智化殿</div>
+                    </div>
+                    <div class="archi-item">
+                        <img src="https://picsum.photos/seed/arch3/400/300.jpg" alt="万佛阁">
+                        <div class="archi-overlay">万佛阁</div>
+                    </div>
+                    <div class="archi-item">
+                        <img src="https://picsum.photos/seed/arch4/400/300.jpg" alt="藏经楼">
+                        <div class="archi-overlay">藏经楼</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>智化寺文化展示</h4>
+                    <p>致力于推广中国传统建筑文化，保护非物质文化遗产，让更多人了解这座明代古刹的历史与魅力。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">寺庙简介</a></li>
+                        <li><a href="#music">京音乐介绍</a></li>
+                        <li><a href="#guide">参观指南</a></li>
+                        <li><a href="#architecture">建筑图集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>地址：北京市东城区禄米仓胡同5号</li>
+                        <li>电话：010-6401XXXX</li>
+                        <li>邮箱：contact@zhihuasi.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 智化寺文化展示平台. 京ICP备XXXXXXXX号. 仅供展示用途，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
