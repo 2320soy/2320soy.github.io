@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>葫芦娃app - 经典动画正版授权与在线阅读平台</title>
+    <meta name="description" content="葫芦娃app提供正版葫芦娃系列动画全集、漫画阅读及互动社区。高清画质、离线缓存、无损音效，随时随地重温童年经典，支持多端同步，安全无毒。">
+    <meta name="keywords" content="葫芦娃app, 葫芦娃, 葫芦娃动画, 葫芦娃漫画, 葫芦娃阅读, 经典动画, 童年回忆">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #fbc02d;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .btn-download:hover {
+            background-color: #b71c1c;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn-hero {
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .hero-image {
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Content Section (Tabs) */
+        .content-section {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab-btn {
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .episode-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: background 0.2s;
+        }
+
+        .episode-item:hover {
+            background-color: #fafafa;
+            border-color: #ddd;
+        }
+
+        .ep-number {
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .ep-info {
+            flex-grow: 1;
+        }
+
+        .ep-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .ep-desc {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .ep-tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        /* Safety & FAQ */
+        .safety-section {
+            padding: 60px 0;
+            background-color: #f1f8e9;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .safety-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .check-icon {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #cfd8dc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span style="color: var(--secondary-color);">●</span> 葫芦娃<span>app</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">功能特色</a>
+                <a href="#content">精彩内容</a>
+                <a href="#safety">安全说明</a>
+            </nav>
+            <a href="#" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>重温童年经典，尽在葫芦娃app</h1>
+                <p>正版授权高清全集，无损音效，支持离线缓存。随时随地与七个葫芦兄弟并肩作战，守护家园。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-hero btn-primary">iOS 下载</a>
+                    <a href="#" class="btn-hero btn-secondary">Android 下载</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/huluwa_hero/800/400" alt="葫芦娃动画封面">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么要选择葫芦娃app？</h2>
+                    <p>专为怀旧用户与动画爱好者打造的高品质阅读平台</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3>正版高清全集</h3>
+                        <p>严格获得版权方授权，提供1080P高清画质，还原经典色彩与细节。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>离线缓存观看</h3>
+                        <p>支持视频/漫画缓存功能，无网络环境下也能流畅播放，随时随地观看。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔊</div>
+                        <h3>无损音效修复</h3>
+                        <p>采用专业音频修复技术，还原原汁原味的经典配乐与配音，听觉盛宴。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>多端数据同步</h3>
+                        <p>手机、平板、电脑账号互通，观看进度自动同步，无缝衔接。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section id="content" class="content-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>精彩内容库</h2>
+                    <p>海量动画剧集与衍生漫画，满足不同需求</p>
+                </div>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'episodes')">经典剧集</button>
+                    <button class="tab-btn" onclick="openTab(event, 'comics')">独家漫画</button>
+                    <button class="tab-btn" onclick="openTab(event, 'extras')">番外彩蛋</button>
+                </div>
+
+                <div id="episodes" class="tab-content active">
+                    <div class="episode-list">
+                        <div class="episode-item">
+                            <div class="ep-number">1</div>
+                            <div class="ep-info">
+                                <div class="ep-title">葫芦兄弟</div>
+                                <div class="ep-desc">七个葫芦娃降生，蛇精夺宝，大娃力大无穷，开启冒险之旅。</div>
+                            </div>
+                            <span class="ep-tag">高清</span>
+                        </div>
+                        <div class="episode-item">
+                            <div class="ep-number">2</div>
+                            <div class="ep-info">
+                                <div class="ep-title">智斗蝎子精</div>
+                                <div class="ep-desc">二娃千里眼顺风耳识破诡计，兄弟联手布下天罗地网。</div>
+                            </div>
+                            <span class="ep-tag">推荐</span>
+                        </div>
+                        <div class="episode-item">
+                            <div class="ep-number">3</div>
+                            <div class="ep-info">
+                                <div class="ep-title">三娃的铜头铁臂</div>
+                                <div class="ep-desc">三娃刀枪不入，却因轻信他人而中计，兄弟们齐心救兄。</div>
+                            </div>
+                        </div>
+                        <div class="episode-item">
+                            <div class="ep-number">4</div>
+                            <div class="ep-info">
+                                <div class="ep-title">四娃与五娃</div>
+                                <div class="ep-desc">四娃喷火五娃吐水，兄弟二人被蛇精用烟熏火燎困住。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="comics" class="tab-content">
+                    <div class="episode-list">
+                        <div class="episode-item">
+                            <div class="ep-number">M</div>
+                            <div class="ep-info">
+                                <div class="ep-title">《葫芦兄弟》前传：山神传说</div>
+                                <div class="ep-desc">独家原创漫画，讲述山神与葫芦山的渊源，揭开妖精封印的秘密。</div>
+                            </div>
+                            <span class="ep-tag">独家</span>
+                        </div>
+                        <div class="episode-item">
+                            <div class="ep-number">M</div>
+                            <div class="ep-info">
+                                <div class="ep-title">《葫芦兄弟》大电影番外篇</div>
+                                <div class="ep-desc">剧场版动画的剧情补全，视角全新，情感更细腻。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="extras" class="tab-content">
+                    <div class="episode-list">
+                        <div class="episode-item">
+                            <div class="ep-number">E</div>
+                            <div class="ep-info">
+                                <div class="ep-title">幕后制作花絮</div>
+                                <div class="ep-desc">经典原画师访谈，配音演员分享，带你走进动画背后的故事。</div>
+                            </div>
+                        </div>
+                        <div class="episode-item">
+                            <div class="ep-number">E</div>
+                            <div class="ep-info">
+                                <div class="ep-title">童年回忆杀</div>
+                                <div class="ep-desc">集结全网最经典的童年瞬间与配音片段。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section id="safety" class="safety-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>安全与隐私保障</h2>
+                    <p>我们承诺无广告骚扰，保障您的设备安全</p>
+                </div>
+                <div class="safety-grid">
+                    <div>
+                        <ul class="safety-list">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>无诱导下载</strong>
+                                    <p style="font-size: 14px; color: #666;">应用商店直接下载，无第三方跳转链接。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>无恶意广告</strong>
+                                    <p style="font-size: 14px; color: #666;">去除了所有弹窗广告与强制广告，纯净阅读体验。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>隐私保护</strong>
+                                    <p style="font-size: 14px; color: #666;">不收集用户观看记录与个人隐私信息。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/seed/security/500/300" alt="安全检测示意图" style="border-radius: var(--border-radius);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>葫芦娃app</h3>
+                    <p>致力于为用户带来最纯粹、最经典的动画观看体验。传承经典，守护童年。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">动画全集</a></li>
+                        <li><a href="#">正版漫画</a></li>
+                        <li><a href="#">高清壁纸</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">下载安装指南</a></li>
+                        <li><a href="#">账号登录问题</a></li>
+                        <li><a href="#">常见故障排除</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">用户反馈</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 葫芦娃动画平台. All Rights Reserved. 仅供展示，非官方下载地址。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // 隐藏所有内容
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // 移除所有按钮的激活状态
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // 显示当前内容并激活按钮
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+  </html>
