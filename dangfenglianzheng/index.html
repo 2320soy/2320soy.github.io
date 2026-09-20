@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党风廉正建设制度-规范管理流程与执行标准体系</title>
+    <meta name="description" content="本站提供全面、系统的党风廉正建设制度参考，涵盖廉政教育、监督机制、风险防控及考核评价等核心模块，旨在为企事业单位构建完善的廉洁管理体系提供规范依据和实施指南。">
+    <meta name="keywords" content="党风廉正建设制度,廉政制度,反腐倡廉,廉洁风险防控,内部监督机制">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-red: #b71c1c;
+            --primary-dark: #7f0000;
+            --primary-light: #ffcdd2;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 4px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-red);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 2px;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            font-weight: 500;
+        }
+
+        .cta-button {
+            background-color: var(--white);
+            color: var(--primary-red);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Grid System */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary-red);
+        }
+
+        .card-icon {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        /* Feature List */
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--primary-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background-color: #fff3f3;
+            border-left: 4px solid var(--primary-red);
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-red);
+            display: flex;
+            align-items: center;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>制度规范</span> 廉政建设
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">制度汇编</a></li>
+                    <li><a href="#">监督机制</a></li>
+                    <li><a href="#">学习园地</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">下载中心</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>构建阳光透明的党风廉正建设体系</h1>
+        <p>提供科学、规范、可执行的党风廉正建设制度模板与实施方案，助力组织强化内部监督，筑牢廉洁从业防线。</p>
+        <div class="hero-tags">
+            <span class="tag">风险防控</span>
+            <span class="tag">教育管理</span>
+            <span class="tag">考核评价</span>
+            <span class="tag">制度汇编</span>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="grid-2">
+            <!-- Left Column: Core Content -->
+            <main>
+                <div class="highlight-box">
+                    <strong>核心提示：</strong> 有效的党风廉正建设制度不仅是一套文本规范，更是组织文化与执行力的体现。本站提供的制度体系涵盖从思想教育到行为约束的全流程管理。
+                </div>
+
+                <!-- Section 1: Overview -->
+                <section>
+                    <h2 class="section-title">制度体系概览</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="margin-bottom: 15px;">党风廉正建设制度体系是组织治理结构的重要组成部分，旨在通过制度化手段预防和惩治腐败，保障组织健康发展。标准的制度体系通常包含以下五大核心模块：</p>
+                            <ul class="feature-list">
+                                <li><strong>组织领导机制：</strong> 明确党委（党组）在党风廉政建设中的主体责任，落实“一岗双责”。</li>
+                                <li><strong>廉洁教育制度：</strong> 建立常态化、制度化的反腐倡廉学习教育机制，包括警示教育、廉政谈话等。</li>
+                                <li><strong>权力运行监督制度：</strong> 规范决策流程，强化对重点领域、关键岗位的制约与监督。</li>
+                                <li><strong>风险防控机制：</strong> 建立廉政风险点排查、评估与分级预警制度。</li>
+                                <li><strong>考核问责制度：</strong> 将党风廉政建设纳入年度绩效考核，实行“一票否决”制。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Key Measures -->
+                <section>
+                    <h2 class="section-title">关键实施措施</h2>
+                    <div class="grid-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">廉政谈话</span>
+                                <span class="card-icon">💬</span>
+                            </div>
+                            <div class="card-body">
+                                建立任职谈话、廉政谈话和提醒谈话制度。对新任干部进行岗前廉政教育，对苗头性问题及时咬耳扯袖，防微杜渐。
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">民主生活会</span>
+                                <span class="card-icon">🤝</span>
+                            </div>
+                            <div class="card-body">
+                                定期召开民主生活会，开展批评与自我批评。通过严肃的党内政治生活，增强党内监督实效，解决自身问题。
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">述责述廉</span>
+                                <span class="card-icon">📊</span>
+                            </div>
+                            <div class="card-body">
+                                实行主要负责人向本级党委（党组）和上级纪委述责述廉制度，接受质询和评议，公开接受监督。
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Risk Control Table -->
+                <section>
+                    <h2 class="section-title">重点领域风险防控指引</h2>
+                    <div class="card">
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>风险领域</th>
+                                        <th>主要风险点</th>
+                                        <th>防控措施</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>资金管理</strong></td>
+                                        <td>违规报销、资金挪用、采购围标串标</td>
+                                        <td>实行财务集中核算，推行电子化采购，定期开展审计</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>工程建设</strong></td>
+                                        <td>违规招投标、工程质量造假、利益输送</td>
+                                        <td>严格执行招投标法，建立工程变更审批备案制</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>选人用人</strong></td>
+                                        <td>任人唯亲、买官卖官、突击提拔</td>
+                                        <td>坚持德才兼备，落实考察预告制和任职回避制</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>物资采购</strong></td>
+                                        <td>吃回扣、收受礼品礼金、以次充好</td>
+                                        <td>建立供应商黑名单制度，推行阳光采购平台</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Column: Sidebar -->
+            <aside>
+                <!-- Quick Access -->
+                <div class="card" style="margin-bottom: 20px;">
+                    <div class="card-header">
+                        <span class="card-title">快速导航</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li><a href="#">《中国共产党廉洁自律准则》解读</a></li>
+                            <li><a href="#">国有企业领导人员廉洁从业若干规定</a></li>
+                            <li><a href="#">“三重一大”决策制度实施细则</a></li>
+                            <li><a href="#">信访举报处理流程规范</a></li>
+                            <li><a href="#">廉政档案建设管理办法</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Download Box -->
+                <div class="card" style="background-color: var(--primary-light); border: 1px solid var(--primary-red);">
+                    <div class="card-header">
+                        <span class="card-title" style="color: var(--primary-dark);">制度汇编包</span>
+                    </div>
+                    <div class="card-body" style="color: var(--primary-dark);">
+                        <p style="margin-bottom: 10px;">包含完整的制度模板与配套表格，可直接套用修改。</p>
+                        <button class="cta-button" style="width: 100%; display: block; text-align: center; border: none; cursor: pointer;">立即下载 (PDF)</button>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <span class="card-title">常见问题 (FAQ)</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">如何制定符合单位的制度？ <span>▼</span></div>
+                            <div class="faq-answer">需结合单位业务特点，梳理权力清单，对照法规标准进行编制，并经过民主程序审议通过。</div>
+                        </div>
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">制度执行不力怎么办？ <span>▼</span></div>
+                            <div class="faq-answer">应加大监督检查力度，将制度执行情况纳入年度考核，对违反制度的行为严肃追责问责。</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>关于我们</h3>
+                <p style="font-size: 0.9rem; line-height: 1.8;">专注于为各级党组织和企事业单位提供专业的党风廉正建设制度解决方案与咨询服务。</p>
+            </div>
+            <div class="footer-col">
+                <h3>制度分类</h3>
+                <ul>
+                    <li><a href="#">综合管理类</a></li>
+                    <li><a href="#">人事招聘类</a></li>
+                    <li><a href="#">财务管理类</a></li>
+                    <li><a href="#">工程招投标类</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系方式</h3>
+                <ul>
+                    <li>咨询热线：400-123-4567</li>
+                    <li>电子邮箱：support@example.com</li>
+                    <li>工作时间：周一至周五 9:00-18:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 党风廉正建设制度服务平台 版权所有 | 仅供学习参考</p>
+        </div>
+    </footer>
+
+</body>
+</html>
